@@ -1,0 +1,123 @@
+/*=============================================
+=            Base-style            =
+=============================================*/
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+:root {
+  --primary-text-color: #808080;
+  --global-bcg-color: #000000;
+  --defolt-white-color: #ffffff;
+  --akcent-color: #ce2d0d;
+  --hover-card-color: #444444;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--global-bcg-color);
+  color: var(--primary-text-color);
+  font-family: Montserrat, 'sans-serif';
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.border {
+  border: 0.313rem solid rgba(255, 255, 255, 0.8);
+  border-radius: 0.616rem;
+  padding: 0.938rem;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  background-color: rgba(50, 50, 50, 0.8);
+}
+
+/*=====  End of Base-style  ======*/
+
+.header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 1rem 2rem; 
+  background-color: var(--global-bcg-color); 
+}
+
+.header_logo {
+  display: flex;
+  align-items: center; 
+}
+
+.header_list {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header_list_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 1.2rem;
+    color: var(--defolt-white-color); 
+    cursor: pointer;
+    transition: color 0.3s ease, fill 0.3s ease; 
+}
+
+.header_list_item svg {
+    fill: var(--defolt-white-color);
+    transition: fill 0.3s ease; 
+}
+
+.header_list_item:hover {
+    color: var(--akcent-color); 
+}
+
+.header_list_item:hover svg {
+    fill: var(--akcent-color);
+}
+
+.home_section_title {
+  font-size: 50px;
+}
