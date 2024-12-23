@@ -12,6 +12,9 @@ html {
   --global-bcg-color: #000000;
   --defolt-white-color: #ffffff;
   --akcent-color: #ce2d0d;
+  --gradient-red-start: #8B0000; /* Темний насичений червоний */
+  --gradient-red-end: #FF4500;   /* Яскравий червоний */
+  --gradient-black: #000000;     /* Чорний */
 }
 
 *,
@@ -52,8 +55,6 @@ h6 {
 main {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   flex-grow: 1;
 }
 body {
@@ -81,9 +82,13 @@ body {
   justify-content: space-between; 
   align-items: center; 
   padding: 1rem 2rem; 
-  background-color: var(--global-bcg-color); 
-}
 
+
+}
+.gradient_container {
+    background: linear-gradient(135deg, var(--gradient-black) 30%, var(--gradient-red-start) 70%, var(--gradient-red-end) 100%);
+    color: white; /* Контрастний текст */
+}
 .header_logo {
   display: flex;
   align-items: center; 
@@ -115,11 +120,11 @@ body {
 }
 
 .header_list_item:hover {
-    color: var(--akcent-color); 
+    color: rgb(255, 65, 65); 
 }
 
 .header_list_item:hover svg {
-    fill: var(--akcent-color);
+    fill: rgb(255, 65, 65); 
 }
 
 
@@ -136,6 +141,16 @@ body {
     gap: 1.5rem;
     padding: 2rem;
     position: relative;
+
+}
+.home_container {
+  display: flex;
+  gap: 100px;
+  margin-top: 300px;
+  margin-bottom: 300px;
+  margin-left: 50px;
+  margin-right: 50px;
+  max-width: 1140px;  
 }
 
 
@@ -143,6 +158,7 @@ body {
 .home_section_title {
     font-size: 3rem;
     color: var(--defolt-white-color);
+    display: flex;
 }
 
 .home_description {
@@ -166,13 +182,13 @@ body {
   font-weight: 700;
   border-radius: 0.5rem;
   transition: background-color 0.3s ease, color 0.3s ease;
-  background-color:var(--defolt-white-color);
-  color: var(--global-bcg-color);
+  background-color:var(--akcent-color);
+  color: var(--defolt-white-color);
   width: 200px;
 }
 .btn:hover {
-  background-color: var(--akcent-color);
-  color: var(--defolt-white-color);
+  background-color:var(--defolt-white-color);
+  color: var(--global-bcg-color);
 }
 
 
@@ -180,6 +196,84 @@ body {
 
 /*=====  End of Home section  ======*/
 
+
+
+/*=============================================
+=            about section            =
+=============================================*/
+.about_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about_container {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
+  max-width: 1140px;
+}
+.about {
+  color: var(--defolt-white-color);
+  padding-left: 25px;
+  padding-right: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main_par {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.help_par {
+  text-align: center;
+  font-weight: 800;
+  color: rgb(255, 102, 102);
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.about_section_title {
+  text-align: center;
+  margin-bottom: 48px;
+  font-size: 3rem;
+}
+
+
+
+.skills_title {
+  color: var(--defolt-white-color);
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 48px;
+}
+.skills_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+  gap: 80px; /* Відстань між елементами */
+  justify-items: center; /* Вирівнювання по центру */
+  align-items: center; /* Вирівнювання по вертикалі */
+}
+
+.skills_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+/*=====  End of about section  ======*/
 
 
 
