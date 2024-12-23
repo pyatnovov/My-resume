@@ -12,7 +12,6 @@ html {
   --global-bcg-color: #000000;
   --defolt-white-color: #ffffff;
   --akcent-color: #ce2d0d;
-  --hover-card-color: #444444;
 }
 
 *,
@@ -123,6 +122,66 @@ body {
     fill: var(--akcent-color);
 }
 
-.home_section_title {
-  font-size: 50px;
+
+
+/*=============================================
+=            Home section            =
+=============================================*/
+.home_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    position: relative;
 }
+
+
+
+.home_section_title {
+    font-size: 3rem;
+    color: var(--defolt-white-color);
+}
+
+.home_description {
+    font-size: 1.5rem;
+    color: var(--primary-text-color);
+    margin-top: 1rem;
+}
+
+.home_buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color:var(--defolt-white-color);
+  color: var(--global-bcg-color);
+  width: 200px;
+}
+.btn:hover {
+  background-color: var(--akcent-color);
+  color: var(--defolt-white-color);
+}
+
+
+
+
+/*=====  End of Home section  ======*/
+
+
+
+
+
+
