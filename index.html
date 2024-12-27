@@ -112,7 +112,7 @@
           provide the best solutions for my clients.
         </p>
         <p class="help_par">Also, Check Out My Resume</p>
-        <a href="./FRONTeND dEVELOPER.pdf" target="_blank">
+        <a href="./CV.pdf" target="_blank">
           <button class="about_button btn">Grab a copy</button>
         </a>
       </div>
@@ -286,7 +286,7 @@
 
 
 
-<!-- Модальне вікно -->
+
 <div id="modal" class="modal">
   <span class="modal_close" onclick="closeModal()">&times;</span>
   <img class="modal_content" id="modalImage" />
@@ -305,7 +305,7 @@
 
 
   <script>
-  // Відкриття модального вікна
+
   function openModal(imageSrc) {
     const modal = document.getElementById("modal");
     const modalImage = document.getElementById("modalImage");
@@ -313,16 +313,15 @@
 
     modal.style.display = "block";
     modalImage.src = imageSrc;
-    modalCaption.innerHTML = "Certification Preview"; // Ви можете налаштувати це динамічно
+    modalCaption.innerHTML = "Certification Preview"; 
   }
 
-  // Закриття модального вікна
+
   function closeModal() {
     const modal = document.getElementById("modal");
     modal.style.display = "none";
   }
 
-  // Закриття модального вікна при кліку поза зображенням
   window.onclick = function (event) {
     const modal = document.getElementById("modal");
     if (event.target === modal) {
@@ -330,7 +329,7 @@
     }
   };
 
-  // Анімація появи карток проектів при скролі
+
 const projectCards = document.querySelectorAll('.project_card');
 
 const revealProjects = () => {
@@ -344,19 +343,19 @@ const revealProjects = () => {
 };
 
 window.addEventListener('scroll', revealProjects);
-revealProjects(); // Виклик при завантаженні сторінки
+revealProjects(); 
 </script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
   $(document).ready(function () {
-    // Open/close the menu on hamburger click
+
     $(".hamburger").click(function () {
       $(this).toggleClass("active");
       $(".header_list").toggleClass("mobile active");
     });
 
-    // Close the menu when a link is clicked
+
     $(".header_link").click(function () {
       $(".hamburger").removeClass("active");
       $(".header_list").removeClass("mobile active");
@@ -365,7 +364,7 @@ revealProjects(); // Виклик при завантаженні сторінк
 </script>
 
 <script>
-  // Add scroll-based animations
+
   const animatedElements = document.querySelectorAll("[data-animate]");
 
   const handleScroll = () => {
@@ -380,7 +379,6 @@ revealProjects(); // Виклик при завантаженні сторінк
 
   document.addEventListener("scroll", handleScroll);
 
-  // Initial check on page load
   handleScroll();
 </script>
 </html>

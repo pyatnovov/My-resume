@@ -1,0 +1,921 @@
+/*=============================================
+=            Base-style            =
+=============================================*/
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+:root {
+  --primary-text-color: #808080;
+  --global-bcg-color: #000000;
+  --defolt-white-color: #ffffff;
+  --akcent-color: #ce2d0d;
+  --gradient-red-start: #8B0000; /* Темний насичений червоний */
+  --gradient-red-end: #FF4500;   /* Яскравий червоний */
+  --gradient-black: #000000;     /* Чорний */
+  --hover-icon-color:rgb(136, 29, 3);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--global-bcg-color);
+  color: var(--primary-text-color);
+  font-family: Montserrat, 'sans-serif';
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.border {
+  border: 0.313rem solid rgba(255, 255, 255, 0.8);
+  border-radius: 0.616rem;
+  padding: 0.938rem;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  background-color: rgba(50, 50, 50, 0.8);
+}
+.gradient_container {
+    background: linear-gradient(135deg, var(--gradient-black) 30%, var(--gradient-red-start) 70%, var(--gradient-red-end) 100%);
+    color: white; /* Контрастний текст */
+}
+
+/*=====  End of Base-style  ======*/
+
+.header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  justify-content: center;
+  background-color: var(--global-bcg-color);
+  padding: 1rem 2rem; 
+  position: sticky;
+  z-index: 1000;
+  top:0;
+  left: 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+}
+
+.header_logo {
+  display: flex;
+  align-items: center; 
+}
+
+.header_list {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header_list_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--defolt-white-color); 
+  cursor: pointer;
+  transition: color 0.3s ease, fill 0.3s ease; 
+}
+.header_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:5px;
+}
+.header_list_item svg {
+    fill: var(--defolt-white-color);
+    transition: fill 0.3s ease; 
+}
+
+.header_list_item:hover {
+    color: rgb(255, 65, 65); 
+}
+
+.header_list_item:hover svg {
+    fill: rgb(255, 65, 65); 
+}
+
+
+
+/*=============================================
+=            Home section            =
+=============================================*/
+.home_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    position: relative;
+
+}
+.home_container {
+  display: flex;
+  gap: 100px;
+  margin-top: 300px;
+  margin-bottom: 300px;
+  margin-left: 50px;
+  margin-right: 50px;
+  max-width: 1140px;  
+}
+
+
+
+.home_section_title {
+    font-size: 3rem;
+    color: var(--defolt-white-color);
+    display: flex;
+}
+
+.home_description {
+    font-size: 1.5rem;
+    color: var(--primary-text-color);
+    margin-top: 1rem;
+}
+
+.home_buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color:var(--akcent-color);
+  color: var(--defolt-white-color);
+  width: 200px;
+}
+.btn:hover {
+  background-color:var(--defolt-white-color);
+  color: var(--global-bcg-color);
+}
+
+
+
+
+/*=====  End of Home section  ======*/
+
+
+
+/*=============================================
+=            about section            =
+=============================================*/
+.about_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about_container {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 300px;
+  margin-bottom: 300px;
+  margin-left: 50px;
+  margin-right: 50px;
+  max-width: 1140px;
+}
+.about {
+  color: var(--defolt-white-color);
+  padding-left: 25px;
+  padding-right: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main_par {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.help_par {
+  text-align: center;
+  font-weight: 800;
+  color: rgb(255, 102, 102);
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.about_section_title {
+  text-align: center;
+  margin-bottom: 48px;
+  font-size: 3rem;
+}
+
+
+
+.skills_title {
+  color: var(--defolt-white-color);
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 48px;
+}
+.skills_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+  gap: 80px; /* Відстань між елементами */
+  justify-items: center; /* Вирівнювання по центру */
+  align-items: center; /* Вирівнювання по вертикалі */
+}
+
+.skills_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+}
+/*=====  End of about section  ======*/
+
+
+
+
+/*=============================================
+=            Projects section            =
+=============================================*/
+/* Контейнер для секції */
+.projects_section_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px auto; /* Центрування і відступи */
+  padding: 0 20px; /* Відступи з боків для мобільних пристроїв */
+  max-width: 1200px; /* Обмеження ширини для великого екрану */
+}
+
+/* Тайтл секції */
+.projects_section_title {
+  font-size: 3rem;
+  margin-bottom: 48px;
+  text-align: center;
+  color: white; /* Контрастний текст */
+}
+
+/* Контейнер для проектів */
+.projects_conteiner {
+  display: flex;
+  flex-wrap: wrap; /* Розташування проектів у кілька рядків */
+  justify-content: space-between; /* Простір між проектами */
+  gap: 20px; /* Відстань між рядками */
+  width: 100%;
+}
+
+/* Картки проектів */
+.project_card {
+  flex: 1 1 calc(33.333% - 20px); /* 3 картки в ряд на великому екрані */
+  max-width: calc(33.333% - 20px);
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Зображення */
+.project_card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Hover-ефекти */
+.project_card:hover {
+  transform: translateY(-10px); /* Легка трансформація вгору */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project_card:hover img {
+  transform: scale(1.1); /* Збільшення зображення */
+}
+
+.project_card:hover .project_overlay {
+  opacity: 1; /* З'явлення тексту */
+  pointer-events: auto; /* Дозволяє клік */
+}
+
+/* Оверлей (текст при наведенні) */
+.project_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* Адаптивність */
+@media screen and (max-width: 1024px) {
+  .project_card {
+    flex: 1 1 calc(50% - 20px); /* 2 картки в ряд на середньому екрані */
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project_card {
+    flex: 1 1 100%; /* 1 картка в ряд на мобільному */
+    max-width: 100%;
+  }
+}
+/*=====  End of Projects section  ======*/
+
+
+
+
+
+
+/*=============================================
+=            Finde me section            =
+=============================================*/
+.find-me-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: var(--gradient-black);
+  color: var(--defolt-white-color);
+}
+
+.find-me-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.find-me-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.find-me-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--akcent-color);
+  color: var(--defolt-white-color);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.find-me-links a:hover {
+  background-color: var(--hover-icon-color);
+  transform: scale(1.1);
+}
+.finde-me-icons {
+  width: 24px;
+  height: 24px;
+}
+
+/*=====  End of Finde me section  ======*/
+
+
+
+
+
+/*=============================================
+=            Certifications Section            =
+=============================================*/
+
+.certifications_section_title {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--defolt-white-color);
+  margin-bottom: 48px;
+}
+.certifications_section {
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.certifications_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.certification_item:first-child {
+  grid-row: span 2;
+}
+
+.certification_image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.certification_image_wrapper {
+  aspect-ratio: 3 / 4; /* Ориентация для портретной картинки */
+}
+
+.certification_item:not(:first-child) .certification_image_wrapper {
+  aspect-ratio: 4 / 3; /* Ориентация для альбомных картинок */
+}
+
+/* Добавляем анимацию при отрисовке */
+.certification_item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s forwards;
+}
+.certification_image {
+  border-radius:15px ;
+}
+
+.certification_item:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.certification_item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.certification_item:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.certification_description {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: var(--defolt-white-color);
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/*=====  End of Certifications Section  ======*/
+
+
+
+/* Модальне вікно */
+.modal {
+  display: none; /* Приховано за замовчуванням */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Зображення в модальному вікні */
+.modal_content {
+  display: block;
+  margin: 5% auto;
+  max-width: 80%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Закриття модального вікна */
+.modal_close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modal_close:hover {
+  color: var(--akcent-color);
+}
+
+/* Підпис до модального зображення */
+.modal_caption {
+  margin: 10px auto;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+  max-width: 80%;
+}
+
+
+
+
+/*=============================================
+=            Footer            =
+=============================================*/
+
+.footer {
+  color: #ffffff; /* Білий текст */
+  padding: 2rem 0;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Тінь для глибини */
+}
+
+.footer-content {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; /* Центрування тексту горизонтально */
+  align-items: center; /* Центрування тексту вертикально */
+  flex-direction: column; /* Стековий порядок */
+  gap: 0.5rem; /* Проміжки між елементами */
+}
+
+.footer p {
+  margin: 0; /* Забираємо зайві відступи */
+  font-size: 1rem; /* Оптимальний розмір тексту */
+  line-height: 1.5; /* Читабельність тексту */
+}
+
+
+
+
+
+/*=====  End of Footer  ======*/
+
+
+
+
+
+/* ======= Адаптивність для планшетів (макс. ширина 1024px) ======= */
+@media screen and (max-width: 1024px) {
+  .header_list {
+    gap: 1rem;
+  }
+
+  .home_section_title {
+    font-size: 2.5rem;
+  }
+
+  .home_description {
+    font-size: 1.2rem;
+  }
+
+  .about_container {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .projects_conteiner {
+    justify-content: center;
+  }
+}
+
+/* ======= Адаптивність для мобільних пристроїв (макс. ширина 768px) ======= */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .header_list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .home_section {
+    padding: 1rem;
+  }
+
+  .home_container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .home_section_title {
+    font-size: 2rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    width: auto;
+  }
+
+  .about_section_title,
+  .skills_title {
+    font-size: 2rem;
+  }
+
+  .skills_list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .project_card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .certifications_list {
+    grid-template-columns: 1fr;
+  }
+
+  .find-me-title {
+    font-size: 2rem;
+  }
+
+  .find-me-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* ======= Адаптивність для дуже маленьких екранів (макс. ширина 480px) ======= */
+@media screen and (max-width: 480px) {
+  .header_list_item {
+    font-size: 0.9rem;
+  }
+
+  .home_section_title {
+    font-size: 1.8rem;
+  }
+
+  .home_description {
+    font-size: 1rem;
+  }
+
+  .about_section_title,
+  .skills_title {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+
+  .find-me-title {
+    font-size: 1.5rem;
+  }
+
+  .certification_description {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* Гамбургер кнопка */
+/* Гамбургер кнопка */
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  position: relative;
+}
+
+.hamburger_line {
+  width: 100%;
+  height: 3px;
+  background-color: var(--defolt-white-color);
+  border-radius: 5px;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  left: 0;
+}
+
+/* Line positions */
+.hamburger_line:nth-child(1) {
+  top: 0;
+}
+.hamburger_line:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hamburger_line:nth-child(3) {
+  bottom: 0;
+}
+
+/* Transform to X */
+.hamburger.active .hamburger_line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .hamburger_line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .hamburger_line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Navigation Menu */
+.header_list {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.header_list.mobile {
+  display: none;
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--global-bcg-color);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.header_list.mobile.active {
+  display: flex;
+}
+
+/* Show Hamburger on Small Screens */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .header_list {
+    display: none;
+  }
+
+  .header_list.mobile.active {
+    display: flex;
+  }
+}
+
+
+/* General Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-90deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Header Animation */
+.header {
+  animation: slideIn 0.8s ease-in-out;
+}
+
+/* Section Titles */
+h1, h2, h3 {
+  animation: fadeIn 1s ease;
+}
+
+/* Buttons */
+.btn {
+  animation: scaleUp 0.8s ease-in-out;
+}
+
+.btn:hover {
+  animation: bounce 0.4s ease-in-out;
+}
+
+/* Project Cards */
+.project_card {
+  animation: fadeIn 1s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project_card:hover {
+  animation: none;
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Skills Icons */
+.skills_item {
+  animation: rotateIn 1s ease;
+}
+
+/* Find-Me Links */
+.find-me-links a {
+  animation: fadeIn 1s ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+.find-me-links a:hover {
+  transform: scale(1.1);
+}
+
+
+/* Footer */
+.footer {
+  animation: fadeIn 1s ease-in-out;
+}
