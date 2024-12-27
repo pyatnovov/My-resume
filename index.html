@@ -21,76 +21,55 @@
   </head>
   <body>
 
-    <header class="header">
-      <div class="header_logo">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="200"
-          height="100"
-          viewBox="0 0 200 100"
-        >
-          <rect width="200" height="100" fill="black" />
-          <text
-            x="50%"
-            y="50%"
-            fill="red"
-            font-size="48"
-            font-family="Arial, sans-serif"
-            text-anchor="middle"
-            alignment-baseline="middle"
-          >
-            VP
-          </text>
+<header class="header">
+  <button class="hamburger">
+    <span class="hamburger_line"></span>
+    <span class="hamburger_line"></span>
+    <span class="hamburger_line"></span>
+  </button>
+  <ul class="header_list">
+    <li class="header_list_item">
+      <a class="header_link" href="#home_section">
+        <svg width="19" height="19">
+          <use href="./css/symbol-defs.svg#icon-home"></use>
         </svg>
-      </div>
-      <ul class="header_list">
-        <li class="header_list_item">
-          <a class="header_link" href="#home_section">
-            <svg width="19" height="19">
-              <use href="./css/symbol-defs.svg#icon-home"></use>
-            </svg>
-            Home
-          </a>
-        </li>
-
-        <li class="header_list_item">
-          <a class="header_link" href="#about_section">
-            <svg width="19" height="19">
-              <use href="./css/symbol-defs.svg#icon-about"></use>
-            </svg>
-            About
-          </a>
-        </li>
-
-        <li class="header_list_item">
-          <a class="header_link" href="#projects_section">
-            <svg width="19" height="19">
-              <use href="./css/symbol-defs.svg#icon-projects"></use>
-            </svg>
-            Projects
-          </a>
-        </li>
-
-        <li class="header_list_item">
-          <a class="header_link" href="#contact_section">
-            <svg width="19" height="19">
-              <use href="./css/symbol-defs.svg#icon-contact"></use>
-            </svg>
-            Contact
-          </a>
-        </li>
-
-        <li class="header_list_item">
-          <a class="header_link" href="#certifications_section">
-            <svg width="19" height="19">
-              <use href="./css/symbol-defs.svg#icon-document-certificate"></use>
-            </svg>
-            Certifications
-          </a>
-        </li>
-      </ul>
-    </header>
-
+        Home
+      </a>
+    </li>
+    <li class="header_list_item">
+      <a class="header_link" href="#about_section">
+        <svg width="19" height="19">
+          <use href="./css/symbol-defs.svg#icon-about"></use>
+        </svg>
+        About
+      </a>
+    </li>
+    <li class="header_list_item">
+      <a class="header_link" href="#projects_section">
+        <svg width="19" height="19">
+          <use href="./css/symbol-defs.svg#icon-projects"></use>
+        </svg>
+        Projects
+      </a>
+    </li>
+    <li class="header_list_item">
+      <a class="header_link" href="#finde_me">
+        <svg width="19" height="19">
+          <use href="./css/symbol-defs.svg#icon-contact"></use>
+        </svg>
+        Contact
+      </a>
+    </li>
+    <li class="header_list_item">
+      <a class="header_link" href="#certifications_section">
+        <svg width="19" height="19">
+          <use href="./css/symbol-defs.svg#icon-document-certificate"></use>
+        </svg>
+        Certifications
+      </a>
+    </li>
+  </ul>
+</header>
     <main class="main">
        <div class="gradient_container">
       <section class="home_section" id="home_section">
@@ -194,22 +173,45 @@
     </section>
 
 
-    <section class="projects_section gradient_container" id="projects_section">
-      <div class="projects_section_container">
-        <h2 class="projects_section_title">My Recent Works</h2>
-        <div class="projects_conteiner">
-          <div><img src="./images/webstudio.png" width="500px" alt=""/></div>
-          <div><img src="./images/liceum.png" width="500px" alt="" /></div>
-          <div><img src="./images/morz.png" width="500px" alt="" /></div>
-          <div><img src="./images/filmoteka.png" width="500px" alt="" /></div>
-          <div><img src="./images/goose.png" width="500px" alt="" /></div>
-          <div><img src="./images/search_pic.png" width="500px" alt="" /></div>
-        </div>
-      </div>
-    </section>
-
+<section class="projects_section gradient_container" id="projects_section">
+  <div class="projects_section_container">
+    <h2 class="projects_section_title">My Recent Works</h2>
+    <div class="projects_conteiner">
+      <!-- Проект 1 -->
+      <a href="https://pyatnovov.github.io/goit-markup-hw-08/" target="_blank" class="project_card">
+        <img src="./images/webstudio.png" alt="Webstudio Project" />
+        <div class="project_overlay">View on GitHub</div>
+      </a>
+      <!-- Проект 2 -->
+      <a href="https://pyatnovov.github.io/ur_liceum_project/" target="_blank" class="project_card">
+        <img src="./images/liceum.png" alt="Liceum Project" />
+        <div class="project_overlay">View on GitHub</div>
+      </a>
+      <!-- Проект 3 -->
+      <a href="https://ilcommitfa.github.io/team-project/" target="_blank" class="project_card">
+        <img src="./images/morz.png" alt="Morz Project" />
+        <div class="project_overlay">View on GitHub</div>
+      </a>
+      <!-- Проект 4 -->
+      <a href="https://aquamarinewave.github.io/goit-js-undefined/" target="_blank" class="project_card">
+        <img src="./images/filmoteka.png" alt="Filmoteka Project" />
+        <div class="project_overlay">View on GitHub</div>
+      </a>
+      <!-- Проект 5 -->
+      <a href="https://t0xick1d.github.io/final-project-frontend-goose/" target="_blank" class="project_card">
+        <img src="./images/goose.png" alt="Goose Project" />
+        <div class="project_overlay">View on GitHub</div>
+      </a>
+      <!-- Проект 6 -->
+      <a href="https://pyatnovov.github.io/goit-react-hw-04-image-finder/" target="_blank" class="project_card">
+        <img src="./images/search_pic.png" alt="Search Pic Project" />
+        <div class="project_overlay">View on GitHub</div>
+      </a>
+    </div>
+  </div>
+</section>
     
-<section class="find-me-section">
+<section class="find-me-section" id="finde_me">
   <h2 class="find-me-title">FIND ME ON</h2>
   <p>Feel free to connect with me</p>
   <img src="images/avatar.png" alt="Avatar" width="200" />
@@ -327,6 +329,58 @@
       closeModal();
     }
   };
+
+  // Анімація появи карток проектів при скролі
+const projectCards = document.querySelectorAll('.project_card');
+
+const revealProjects = () => {
+  const triggerHeight = window.innerHeight / 1.2;
+  projectCards.forEach((card) => {
+    const cardTop = card.getBoundingClientRect().top;
+    if (cardTop < triggerHeight) {
+      card.classList.add('visible');
+    }
+  });
+};
+
+window.addEventListener('scroll', revealProjects);
+revealProjects(); // Виклик при завантаженні сторінки
 </script>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function () {
+    // Open/close the menu on hamburger click
+    $(".hamburger").click(function () {
+      $(this).toggleClass("active");
+      $(".header_list").toggleClass("mobile active");
+    });
+
+    // Close the menu when a link is clicked
+    $(".header_link").click(function () {
+      $(".hamburger").removeClass("active");
+      $(".header_list").removeClass("mobile active");
+    });
+  });
+</script>
+
+<script>
+  // Add scroll-based animations
+  const animatedElements = document.querySelectorAll("[data-animate]");
+
+  const handleScroll = () => {
+    animatedElements.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      const inView = rect.top <= window.innerHeight && rect.bottom >= 0;
+      if (inView) {
+        el.classList.add("visible");
+      }
+    });
+  };
+
+  document.addEventListener("scroll", handleScroll);
+
+  // Initial check on page load
+  handleScroll();
+</script>
 </html>
